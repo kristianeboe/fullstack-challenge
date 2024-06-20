@@ -14,3 +14,4 @@
 ## What would I have done with more time?
 
 1. More styling, at least more MUI components. I'm not a designer, but I can make things look good enough :)
+2. More comments in the code. Going to do that now actually...

@@ -14,8 +14,9 @@ export const postRouter = createTRPCRouter({
         `https://jsonplaceholder.typicode.com/posts/${input.postId}/comments`,
       ).then((res) => res.json())) as {
         id: number;
-        title: string;
         body: string;
+        name: string;
+        email: string;
       }[];
 
       return comments;
