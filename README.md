@@ -1,29 +1,16 @@
-# Create T3 App
+# Fanvue's Fullstack challenge
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+## What I did?
 
-## What's next? How do I make an app with this?
+1. Cloned this repo to my machine https://github.com/fanvue/fullstack-challenge
+2. In a separate folder used [create-t3-app](https://create.t3.gg/) to create a new project
+3. Installed MUI in the new t3 project, and replicated initial page structure from the original repo
+4. Implemented the Feed with a server component page for the main feed and posts, and then used TRPC to load the per post comments inside each PostCard component. With more time I would have used an Intersection Observer to load comments as the user scrolls down the page.
+5. Implemented the vault. Decided to load all 5k photos serverside 😅, but implemented a simple client side pagination/view to not overwhelm the browser with displaying all images at once.
+6. Considered implementing a MUI modal / lightbox for the images, but decided to just open a link to a new tab to display the image there instead.
+7. Added the favicon
+8. Added metatags for title and description for all pages
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## What would I have done with more time?
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
-
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
-
-## Learn More
-
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+1. More styling, at least more MUI components. I'm not a designer, but I can make things look good enough :)
