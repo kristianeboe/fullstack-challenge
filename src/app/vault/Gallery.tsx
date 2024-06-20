@@ -2,6 +2,7 @@
 
 import { Button, Typography } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 import { useMemo, useState } from "react";
 
 export function Gallery(props: {
@@ -16,19 +17,25 @@ export function Gallery(props: {
     );
   }, [photosPaginationIndex]);
 
+  // Could have used Mui Image List here, but it was not really part of the task, and the photo data does not have src sets anyway https://mui.com/material-ui/react-image-list/
   return (
     <div>
       <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
         {photosToDisplay.map((photo) => (
           <div key={photo.id}>
-            <Image
-              src={photo.url}
-              alt={photo.title}
-              className="h-auto w-full"
-              width={200}
-              height={200}
-            />
-            <Typography variant="body2">{photo.title}</Typography>
+            <Link
+              href={`/vault/${photo.id}?photoUrl=${photo.url}`}
+              target="_blank"
+            >
+              <Image
+                src={photo.url}
+                alt={photo.title}
+                className="h-auto w-full"
+                width={200}
+                height={200}
+              />
+              <Typography variant="body2">{photo.title}</Typography>
+            </Link>
           </div>
         ))}
       </div>
