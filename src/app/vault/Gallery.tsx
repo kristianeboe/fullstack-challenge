@@ -15,7 +15,7 @@ export function Gallery(props: {
       photosPaginationIndex,
       photosPaginationIndex + 6,
     );
-  }, [photosPaginationIndex]);
+  }, [photosPaginationIndex, props.allPhotos]);
 
   // Could have used Mui Image List here, but it was not really part of the task, and the photo data does not have src sets anyway https://mui.com/material-ui/react-image-list/
   return (
