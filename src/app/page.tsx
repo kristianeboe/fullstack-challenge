@@ -1,7 +1,11 @@
 import NextLink from "next/link";
 
-import { api } from "@/trpc/server";
-import { Box, Grid, Typography, Link, Paper } from "@mui/material";
+import { Box, Grid, Typography, Paper } from "@mui/material";
+
+export const metadata = {
+  title: "Home | Fanvue Fullstack coding challenge",
+  description: "Entry point to the two task pages",
+};
 
 export default async function Home() {
   return (

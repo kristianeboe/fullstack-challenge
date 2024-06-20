@@ -1,3 +1,21 @@
+import { type Metadata } from "next";
+
+// Generates dynamic metadata https://nextjs.org/docs/app/building-your-application/optimizing/metadata
+export function generateMetadata(props: {
+  params: {
+    photoId: string;
+  };
+  searchParams: Record<string, string>;
+}): Metadata {
+  return {
+    title: `${props.params.photoId} Photo | Fanvue Fullstack coding challenge`,
+    description: `A full page view of photo id ${props.params.photoId} with url ${props.searchParams.photoUrl}`,
+    openGraph: {
+      images: [props.searchParams.photoUrl!],
+    },
+  };
+}
+
 export default function PhotoFullscreenPage(props: {
   params: {
     photoId: string;

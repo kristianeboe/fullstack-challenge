@@ -1,6 +1,13 @@
 import { Typography } from "@mui/material";
-import Image from "next/image";
+
 import { Gallery } from "./Gallery";
+import { type Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Vault | Fanvue Fullstack coding challenge",
+  description:
+    "A responsive grid of square images. Clicking on a photo will open it in a fullscreen view.",
+};
 
 export default async function VaultPage() {
   const photos = (await fetch(
@@ -19,7 +26,6 @@ export default async function VaultPage() {
         Vault
       </Typography>
       <Gallery allPhotos={photos} />
-      
     </div>
   );
 }
