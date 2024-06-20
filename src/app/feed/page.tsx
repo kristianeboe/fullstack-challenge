@@ -1,4 +1,5 @@
-import { Paper, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
+import { PostCard } from "./PostCard";
 
 export default async function FeedPage() {
   const posts = (await fetch("https://jsonplaceholder.typicode.com/posts").then(
@@ -12,18 +13,14 @@ export default async function FeedPage() {
           Feed
         </Typography>
         {posts.map((post) => (
-          <PostCard key={post.id} title={post.title} body={post.body} />
+          <PostCard
+            key={post.id}
+            id={post.id}
+            title={post.title}
+            body={post.body}
+          />
         ))}
       </div>
     </div>
-  );
-}
-
-function PostCard(props: { title: string; body: string }) {
-  return (
-    <Paper>
-      <Typography variant="h4">{props.title}</Typography>
-      <Typography variant="body1">{props.body}</Typography>
-    </Paper>
   );
 }
